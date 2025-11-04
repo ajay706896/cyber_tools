@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="dark"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Tools Directory</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="app-content">
+        <header class="sticky top-0 z-50 w-full bg-[var(--bg-primary)]/80 backdrop-blur-sm border-b border-[var(--border-color)]">
+            <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold">
+                    <i class="ri-shield-keyhole-line text-neon"></i> Cyber <span class="text-neon">Tools</span>
+                </a>
+                <button id="theme-toggle" class="text-2xl p-2 rounded-lg hover:bg-[var(--bg-secondary)] text-[var(--text-primary)]">
+                    <i class="ri-sun-line"></i> </button>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-4 py-8">
+
+            <section id="hero" class="text-center py-16 md:py-24 fade-in-section">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    Cyber Tools <span class="text-neon">Directory</span>
+                </h1>
+                <p class="text-lg md:text-xl text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
+                    Discover top tools, labs & learning platforms for cybersecurity and ethical hacking
+                </p>
+                <div class="relative max-w-lg mx-auto">
+                    <input id="search-bar" type="text" placeholder="Search for tools (e.g., Nmap, Wireshark, OSINT...)" class="w-full p-4 pr-12 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-color)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] text-[var(--text-primary)]">
+                    <i class="ri-search-line absolute top-1/2 right-4 -translate-y-1/2 text-[var(--text-secondary)]"></i>
+                </div>
+            </section>
+
+            <section id="tools" class="py-16 fade-in-section">
+                <h2 class="text-3xl font-bold mb-8 text-center">
+                    <i class="ri-terminal-box-line text-neon"></i> Cyber <span class="text-neon">Tools</span>
+                </h2>
+                <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    </div>
+                <p id="no-results" class="text-center text-[var(--text-secondary)] text-lg hidden mt-8">No tools found matching your search.</p>
+            </section>
+
+            <section id="labs" class="py-16 fade-in-section">
+                <h2 class="text-3xl font-bold mb-8 text-center">
+                    <i class="ri-trophy-line text-neon"></i> Practice <span class="text-neon">Labs</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card p-6 flex flex-col justify-between">
+                        <div>
+                            <img src="https://placehold.co/100x100/1a202c/34d399?text=TryHackMe" alt="TryHackMe Logo" class="w-16 h-16 mb-4 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-2">TryHackMe</h3>
+                            <p class="text-[var(--text-secondary)] mb-4 text-sm">A fantastic platform for beginners to learn cybersecurity through hands-on labs and guided paths.</p>
+                        </div>
+                        <a href="https://tryhackme.com/" target="_blank" rel="noopener noreferrer" class="btn-primary text-center">Visit Site</a>
+                    </div>
+                    <div class="card p-6 flex flex-col justify-between">
+                        <div>
+                            <img src="https://placehold.co/100x100/1a202c/34d399?text=HackTheBox" alt="HackTheBox Logo" class="w-16 h-16 mb-4 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-2">Hack The Box</h3>
+                            <p class="text-[var(--text-secondary)] mb-4 text-sm">A popular, challenging platform with a wide array of vulnerable machines and labs for all skill levels.</p>
+                        </div>
+                        <a href="https://www.hackthebox.com/" target="_blank" rel="noopener noreferrer" class="btn-primary text-center">Visit Site</a>
+                    </div>
+                    <div class="card p-6 flex flex-col justify-between">
+                        <div>
+                            <img src="https://placehold.co/100x100/1a202c/34d399?text=PortSwigger" alt="PortSwigger Labs Logo" class="w-16 h-16 mb-4 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-2">PortSwigger Labs</h3>
+                            <p class="text-[var(--text-secondary)] mb-4 text-sm">The Web Security Academy. Unmatched, free labs for learning web application vulnerabilities from the creators of Burp Suite.</p>
+                        </div>
+                        <a href="https://portswigger.net/web-security" target="_blank" rel="noopener noreferrer" class="btn-primary text-center">Visit Site</a>
+                    </div>
+                    <div class="card p-6 flex flex-col justify-between">
+                        <div>
+                            <img src="https://placehold.co/100x100/1a202c/34d399?text=OverTheWire" alt="OverTheWire Logo" class="w-16 h-16 mb-4 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-2">OverTheWire</h3>
+                            <p class="text-[var(--text-secondary)] mb-4 text-sm">A classic. Learn security concepts by playing wargames in a terminal-based environment. Starts simple, gets hard.</p>
+                        </div>
+                        <a href="https://overthewire.org/wargames/" target="_blank" rel="noopener noreferrer" class="btn-primary text-center">Visit Site</a>
+                    </div>
+                    <div class="card p-6 flex flex-col justify-between">
+                        <div>
+                            <img src="https://placehold.co/100x100/1a202c/34d399?text=CyberDefenders" alt="CyberDefenders Logo" class="w-16 h-16 mb-4 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-2">CyberDefenders</h3>
+                            <p class="text-[var(--text-secondary)] mb-4 text-sm">Blue Team focused platform offering DFIR (Digital Forensics and Incident Response) challenges and CTFs.</p>
+                        </div>
+                        <a href="https://cyberdefenders.org/" target="_blank" rel="noopener noreferrer" class="btn-primary text-center">Visit Site</a>
+                    </div>
+                    <div class="card p-6 flex flex-col justify-between">
+                        <div>
+                            <img src="https://placehold.co/100x100/1a202c/34d399?text=PicoCTF" alt="PicoCTF Logo" class="w-16 h-16 mb-4 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-2">PicoCTF</h3>
+                            <p class="text-[var(--text-secondary)] mb-4 text-sm">A free, computer security education program with a CTF. Excellent for high school and college beginners.</p>
+                        </div>
+                        <a href="https://picoctf.org/" target="_blank" rel="noopener noreferrer" class="btn-primary text-center">Visit Site</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="learning" class="py-16 fade-in-section">
+                <h2 class="text-3xl font-bold mb-8 text-center">
+                    <i class="ri-book-read-line text-neon"></i> Learning <span class="text-neon">Resources</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <a href="https://owasp.org/" target="_blank" rel="noopener noreferrer" class="card p-6 block">
+                        <i class="ri-shield-check-line text-4xl text-neon mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">OWASP</h3>
+                        <p class="text-[var(--text-secondary)] text-sm">The Open Web Application Security Project. The bible for web security, including the famous Top 10 list.</p>
+                    </a>
+                    <a href="https://attack.mitre.org/" target="_blank" rel="noopener noreferrer" class="card p-6 block">
+                        <i class="ri-matrix-line text-4xl text-neon mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">MITRE ATT&CK</h3>
+                        <p class="text-[var(--text-secondary)] text-sm">A globally-accessible knowledge base of adversary tactics and techniques based on real-world observations.</p>
+                    </a>
+                    <a href="https://www.sans.org/resources/" target="_blank" rel="noopener noreferrer" class="card p-6 block">
+                        <i class="ri-file-text-line text-4xl text-neon mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">SANS Resources</h3>
+                        <p class="text-[var(--text-secondary)] text-sm">A trusted source for information security training, with many free webcasts, papers, and cheat sheets.</p>
+                    </a>
+                    <a href="https://www.youtube.com/@LiveOverflow" target="_blank" rel="noopener noreferrer" class="card p-6 block">
+                        <i class="ri-youtube-line text-4xl text-neon mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-2">LiveOverflow</h3>
+                        <p class="text-[var(--text-secondary)] text-sm">High-quality, technical videos on binary exploitation, reverse engineering, and CTF walkthroughs.</p>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="border-t border-[var(--border-color)] mt-16 py-8">
+            <div class="container mx-auto px-4 text-center text-[var(--text-secondary)]">
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="#" class="text-2xl hover:text-neon"><i class="ri-github-fill"></i></a>
+                    <a href="#" class="text-2xl hover:text-neon"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" class="text-2xl hover:text-neon"><i class="ri-linkedin-box-fill"></i></a>
+                </div>
+                <p>&copy; 2025 Cyber Tools Directory. All rights reserved.</p>
+                <p class="text-sm">Terms | Privacy | Credits</p>
+            </div>
+        </footer>
+
+        <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-black/70 p-4 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div id="modal-content" class="relative w-full max-w-2xl p-6 rounded-lg shadow-xl card">
+                <button id="modal-close" class="absolute top-4 right-4 text-2xl text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
+                    <i class="ri-close-line"></i>
+                </button>
+                <div id="modal-body">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
